@@ -89,19 +89,11 @@ h2 {
 
 
 .cards {
-    @apply grid grid-cols-1 gap-x-8 gap-y-0;
-}
-
-.cards article:first-child {
-    @apply rounded-tl-xl rounded-bl-xl;
-}
-
-.cards article:last-child {
-    @apply rounded-tr-xl rounded-br-xl;
+    @apply grid grid-cols-1 gap-y-8 gap-x-0;
 }
 
 .card {
-    @apply max-w-sm text-center bg-white shadow-xl;
+    @apply max-w-sm text-center bg-white shadow-xl rounded-xl;
 }
 
 h3 {
@@ -201,6 +193,14 @@ h3 {
         @apply grid;
         grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) minmax(0, 1.05fr);
         align-items: center;
+    }
+
+    .cards > :first-child {
+        @apply rounded-none rounded-tl-xl rounded-bl-xl;
+    }
+    
+    .cards > :last-child {
+        @apply rounded-none rounded-tr-xl rounded-br-xl;
     }
 
     .card {
